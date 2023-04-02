@@ -1,0 +1,31 @@
+.footer {
+	@include bg-dark-granite;
+	padding: 2rem 0;
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: size('gap');
+	}
+
+	&__main {
+		flex-shrink: 0;
+		width: 17.5rem;
+		max-width: 100%;
+	}
+
+	&__social {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+		color: color('background');
+	}
+
+	&__disclaimer {
+		flex: 1 1 0;
+		min-width: 15rem;
+		color: rgba(#fff, .5);
+		font-size: 0.875rem;
+		line-height: 140%;
+	}
+}

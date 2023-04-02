@@ -1,0 +1,111 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: clamp(6rem, 10vw, 10rem);
+    height: 100vh;
+    min-height: 52rem;
+    background: url(../img/hero/sky.png) no-repeat center #6395CA;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+
+    &__bg {
+        &-clouds {
+            pointer-events: none;
+            position: absolute;
+            top: -10%;
+            left: calc(50% - 50vw);
+            background: url(../img/hero/clouds.png) repeat-x center center;
+            background-size: clamp(500px, 70vw, 70%) auto;
+            width: 100vw;
+            height: 100%;
+            z-index: 0;
+        }
+
+        &-front {
+            pointer-events: none;
+            position: absolute;
+            top: clamp(20rem, 50vw, 12rem);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url(../img/hero/front.png) no-repeat center top;
+            background-size: clamp(866px, 100vw, 1974px) auto;
+            z-index: 2;
+        }
+    }
+
+    &__wrap, &__indicators {
+        width: 63rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    &__wrap {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        @include mobile {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &__indicators {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        gap: 1rem;
+        justify-content: space-between;
+        position: relative;
+        z-index: 3;
+        margin-top: auto;
+        margin-bottom: clamp(3rem, 5vh + 5vw, 15rem);
+
+        @include mobile {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &__indicator {
+        min-width: clamp(12rem, 20vw, 17.5rem);
+        flex-shrink: 1;
+
+        &:nth-child(even) {
+            margin-left: auto;
+        }
+        
+        &:first-child {
+            margin-top: clamp(3rem, 1vw, 7rem);
+        }
+    }
+
+    &__descriptor {
+        font-size: .875rem;
+        font-weight: 700;
+        opacity: .7;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    &__title {
+        font-size: size('text', 'title');
+        @include text-caption;
+        color: inherit;
+    }
+
+    &__description {
+        font-size: size('text', 'large');
+        margin: 2rem auto 0;
+        max-width: 37rem;
+    }
+
+    &__button {
+        margin: clamp(1rem, 5vw, 2rem) auto 0;
+    }
+}

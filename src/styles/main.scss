@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "sass:list";
+
+// Переменные, миксины, функции
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+// CSS-файлы библиотек
+@import "vendor/libs";
+
+// Основное
+@import "base/fonts";
+@import "base/layout";
+@import "base/general";
+
+// Компоненты
+@import "elements/menu";
+
+// Блоки
+@import "sections/header";
+@import "sections/hero";
+@import "sections/about";
+@import "sections/inner";
+@import "sections/cta";
+@import "sections/features";
+@import "sections/outer";
+@import "sections/appartments";
+@import "sections/purchase";
+@import "sections/developer";
+@import "sections/progress";
+@import "sections/footer";
+@import "sections/modal";

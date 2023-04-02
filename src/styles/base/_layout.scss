@@ -1,0 +1,13 @@
+$container-width: 1216px;
+
+.container {
+    width: 100%;
+    max-width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

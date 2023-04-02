@@ -1,0 +1,64 @@
+.features {
+	@include bg-light-granite;
+	font-size: size('text');
+
+	&__header {
+		display: flex;
+		align-items: end;
+		flex-wrap: wrap;
+		gap: clamp(1.5rem, 5vw, 2rem);
+		margin-bottom: clamp(1.5rem, 5vw, 6rem);
+	}
+
+	&__title {
+		width: 43.5rem;
+		max-width: 100%;
+	}
+
+	&__description {
+		width: 30.5rem;
+		min-width: 40%;
+		max-width: 100%;
+		flex: 1 1 0;
+	}
+
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: clamp(1.5rem, 5vw, 5rem);
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		width: clamp(20rem, 30vw, 37rem);
+		flex-grow: 1;
+		max-width: 37rem;
+		gap: 1.5rem;
+
+		@include desktop {
+			&:nth-child(even) {
+				width: clamp(20rem, 30vw, 30.5rem);
+				max-width: 30.5rem;
+				flex-direction: column-reverse;
+			}
+		}
+
+		&__image {
+			height: 24rem;
+			overflow: hidden;
+
+			@include mobile {
+				aspect-ratio: 4/3;
+				height: auto;
+			}
+		}
+		
+		&__title {
+			@include text-caption;
+			font-size: clamp(1.5rem, 5vw, 2.5rem);
+			margin-bottom: 1rem;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.inner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &__prospect {
+        position: relative;
+        margin: clamp(1.5rem, 5vw, 3.5rem) 0;
+        min-height: 40rem;
+        background: url(../img/prospect.png) no-repeat center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2rem;
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-row-gap: 2rem;
+        }
+
+        @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 1rem;
+        }
+    }
+
+    &-item {
+        &__icon {
+            @include square(clamp(2.5rem, 5vw, 3.5rem));
+            flex-shrink: 0;
+            fill: color('accent');
+            margin-bottom: 1rem;
+        }
+
+        &__title {
+            @include text-caption;
+            font-size: clamp(1.25rem, -1rem + 4vw, 1.5rem);
+            margin-bottom: clamp(0.5rem, -1rem + 4vw, 1rem);
+        }
+
+        &__text {
+            font-size: size('text');
+        }
+
+        @media (max-width: 500px) {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+    }
+}

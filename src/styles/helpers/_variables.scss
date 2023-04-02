@@ -1,0 +1,29 @@
+$colors: (
+	'background': (
+		'base': #CCB49A,
+		'base2': #C9AC8B,
+		'light': #F7F2EE,
+		'dark': #494949,
+	),
+	'text': (
+		'base': #332D27,
+		'weak': #878078,
+		'strong': #291F13,
+	),
+	'accent': (
+		'base': rgba(#C74C31, 0.9),
+		'hover': #C74C31
+	)
+);
+
+$sizes: (
+	'text': (
+		'title': clamp(2.5rem, -1rem + 10vw, 5.5rem),
+		'large': clamp(1rem, -1rem + 4vw, 1.25rem),
+		'base': clamp(0.875rem, 2vw, 1rem),
+		'small': clamp(0.75rem, 10vw, 0.875rem)
+	),
+	'gap': (
+		'base': clamp(1rem, -1rem + 5vw, 2rem)
+	)
+);

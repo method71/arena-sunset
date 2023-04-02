@@ -1,0 +1,60 @@
+@mixin mobile {
+    @media (max-width: $container-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $container-width) {
+        @content;
+    }
+}
+
+@mixin rounded($radius: 2px) {
+    border-radius: $radius;
+}
+
+@mixin text-caption {
+	font-family: 'Literata', serif;
+	font-style: italic;
+	letter-spacing: -0.03em;
+	line-height: 100%;
+	color: color('text', 'strong');
+}
+
+@mixin text-gradient {
+	background: radial-gradient(50% 50% at 50% 50%, #8D6940 0%, #291F13 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+@mixin bg-base-granite {
+	background-image: url(../img/bg/base-granite.png);
+	background-color: color('background');
+}
+
+@mixin bg-light-granite {
+	background-image: url(../img/bg/light-granite.png);
+	background-color: color('background', 'light');
+}
+
+@mixin bg-dark-granite {
+	background-image: url(../img/bg/dark-granite.png);
+	background-color: color('background', 'dark');
+	color: rgba(#fff, 0.95);
+
+	.title {
+		color: #fff;
+	}
+}
+
+@mixin transition($duration: .2s) {
+    transition: all $duration ease-in-out;
+}
+
+@mixin square($size: 1rem) {
+    width: $size;
+    height: $size;
+}
