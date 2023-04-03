@@ -2,12 +2,23 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-    &__prospect {
+    &__image {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
         position: relative;
         margin: clamp(1.5rem, 5vw, 3.5rem) 0;
-        min-height: 40rem;
-        background: url(../img/prospect.png) no-repeat center;
-        background-attachment: fixed;
+
+        picture {
+            min-width: 800px;
+        }
+    }
+
+    &__markers {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        min-width: 800px;
         background-size: cover;
     }
 
