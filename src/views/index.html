@@ -39,18 +39,18 @@
                 </div>
 
                 <div class="header__group">
-                    <a href="#" class="header__button">
+                    <button class="header__button">
                         <svg class="icon">
                             <use xlink:href="img/sprites/sprite.svg#Globe"></use>
                         </svg>
                         Қаз
-                    </a>
+                    </button>
 
-                    <a href="#" class="header__button">
+                    <a href="tel:87003754000" class="header__button">
                         <svg class="icon">
                             <use xlink:href="img/sprites/sprite.svg#Phone"></use>
                         </svg>
-                        8 (000) 000 00 00 
+                        8 (700) 375 40 00
                     </a>
                 </div>
             </div>
@@ -119,12 +119,12 @@
 
             <figure class="inner__image">
                 <picture class="inner__prospect">
-                    <source media="(min-width: 960px)" srcset="img/prospect@2x.png" />
-                    <img src="img/prospect.png" alt="Внутренняя инфраструктура Arena Sunset" />
+                    <source media="(min-width: 960px)" srcset="img/prospect@2x.webp" />
+                    <img src="img/prospect.webp" alt="Внутренняя инфраструктура Arena Sunset" />
                 </picture>
                 <picture class="inner__markers">
-                    <source media="(min-width: 960px)" srcset="img/markers@2x.png" />
-                    <img src="img/markers.png" alt="noindex" />
+                    <source media="(min-width: 960px)" srcset="img/markers@2x.webp" />
+                    <img src="img/markers.webp" alt="noindex" />
                 </picture>
             </figure>
 
@@ -227,9 +227,7 @@
         </section>
 
         <section id="outer" class="section outer">
-            <div class="outer__scheme">
-                <img src="img/map.webp" alt="">
-            </div>
+            <div class="outer__scheme" id="map"></div>
             <div class="container outer__main">
                 <h2 class="title outer__title" data-animate="reveal">Оцените свободу</h2>
                 <p class="outer__description" data-animate="reveal">ЖК ARENA SUNSET расположен в одном из самых перспективных районов города. Отсюда можно быстро добраться как в центр, так и за город. К вашим услугам более 10 автобусных маршрутов и 2 автомобильных проспекта.</p>
@@ -606,21 +604,21 @@
                     <div class="swiper-wrapper progress__slider">
                         <a href="https://www.youtube.com/watch?v=SvApoH3n9FE" class="progress-item swiper-slide" data-lightbox>
                             <div class="progress-item__preview">
-                                <img src="/img/progress.webp" alt="">
+                                <img src="img/progress.webp" alt="">
                                 <button class="progress-item__play"></button>
                             </div>
                             <h3 class="progress-item__title">Июль, 2023</h3>
                         </a>
                         <a href="https://www.youtube.com/watch?v=SvApoH3n9FE" class="progress-item swiper-slide" data-lightbox>
                             <div class="progress-item__preview">
-                                <img src="/img/progress.webp" alt="">
+                                <img src="img/progress.webp" alt="">
                                 <button class="progress-item__play"></button>
                             </div>
                             <h3 class="progress-item__title">Июнь, 2023</h3>
                         </a>
                         <a href="https://www.youtube.com/watch?v=SvApoH3n9FE" class="progress-item swiper-slide" data-lightbox>
                             <div class="progress-item__preview">
-                                <img src="/img/progress.webp" alt="">
+                                <img src="img/progress.webp" alt="">
                                 <button class="progress-item__play"></button>
                             </div>
                             <h3 class="progress-item__title">Май, 2023</h3>
@@ -681,6 +679,7 @@
             </div>        
         </div>
 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf9UP6bU2Q-8tFyKZW5ag8GmFHt-HtSiU&callback=initMap&v=weekly" defer></script>
         <script src="js/vendor.js"></script>
         <script src="js/main.js"></script>
     </body>

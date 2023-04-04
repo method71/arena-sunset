@@ -1,9 +1,10 @@
 import './_animations';
 import './_slider';
-import './_modal';
 import './_menu';
+import './_map';
 import './_form';
 import './_filter';
+import './_modal';
 
 window.addEventListener('DOMContentLoaded', (e) => {
 	let scrollby = 200;
