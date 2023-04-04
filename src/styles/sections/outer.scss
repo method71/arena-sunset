@@ -5,6 +5,17 @@
 	padding-bottom: clamp(3rem, 10vw, 5.5rem);
 	font-size: size('text');
 	@include bg-base-granite;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(180deg, rgba(#CCB49A, 0) 0%, rgba(#CCB49A, 1) 100%);
+		pointer-events: none;
+	}
 	
 	&__scheme {
 		position: absolute;
@@ -21,6 +32,7 @@
 		height: 100%;
 		justify-content: space-between;
 		pointer-events: none;
+		z-index: 2;
 	}
 
 	&__description {
