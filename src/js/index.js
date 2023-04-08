@@ -1,3 +1,4 @@
+import './_locales';
 import './_animations';
 import './_slider';
 import './_menu';

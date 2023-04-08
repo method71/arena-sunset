@@ -6,7 +6,7 @@ import debug from "gulp-debug";
 
 gulp.task("gzip", () => {
     return gulp.src(paths.gzip.src)
-        .pipe(gulp.dest(paths.gzip.dist))
+        .pipe(gulp.dest(paths.gzip.dist), { base: './' })
         .pipe(debug({
             "title": "GZIP config"
         }));

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Arena Sunset</title>
+        <title>ЖК Arena Sunset</title>
         <meta name="theme-color" content="#fff">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -22,35 +22,49 @@
                             <div class="menu-icon__bar"></div>
                             <div class="menu-icon__bar"></div>
                         </div>
-                        Меню
+                        <span data-string="menu">Меню</span>
                     </button>
                     <div class="menu">
-                        <a href="#hero" class="menu__item">Arena Sunset</a>
-                        <a href="#about" class="menu__item">Описание</a>
-                        <a href="#inner" class="menu__item">Внутренняя инфраструктура</a>
-                        <a href="#features" class="menu__item">Преимущества</a>
-                        <a href="#outer" class="menu__item">Внешняя инфраструктура</a>
-                        <a href="#appartments" class="menu__item">Планировки</a>
-                        <a href="#purchase" class="menu__item">Варианты покупки</a>
-                        <a href="#developer" class="menu__item">Застройщик</a>
-                        <a href="#progress" class="menu__item">Ход строительства</a>
-                        <a href="#" target="_blank" class="menu__item">Бизнес-центр</a>
+                        <a data-string="menu_01" href="#hero" class="menu__item">Arena Sunset</a>
+                        <a data-string="menu_02" href="#about" class="menu__item">Описание</a>
+                        <a data-string="menu_03" href="#inner" class="menu__item">Внутренняя инфраструктура</a>
+                        <a data-string="menu_04" href="#features" class="menu__item">Преимущества</a>
+                        <a data-string="menu_05" href="#outer" class="menu__item">Внешняя инфраструктура</a>
+                        <a data-string="menu_06" href="#appartments" class="menu__item">Планировки</a>
+                        <a data-string="menu_07" href="#purchase" class="menu__item">Варианты покупки</a>
+                        <a data-string="menu_08" href="#developer" class="menu__item">Застройщик</a>
+                        <a data-string="menu_09" href="#progress" class="menu__item">Ход строительства</a>
+                        <a data-string="menu_10" href="#" target="_blank" class="menu__item">Бизнес-центр</a>
                     </div>
                 </div>
 
                 <div class="header__group">
-                    <button class="header__button">
+                    <button class="header__button" data-change-lng="kz" data-locale="ru">
                         <svg class="icon">
                             <use xlink:href="img/sprites/sprite.svg#Globe"></use>
                         </svg>
                         Қаз
                     </button>
 
-                    <a href="tel:87003754000" class="header__button">
+                    <button class="header__button" data-change-lng="ru" data-locale="kz" style="display:none">
+                        <svg class="icon">
+                            <use xlink:href="img/sprites/sprite.svg#Globe"></use>
+                        </svg>
+                        Рус
+                    </button>
+
+                    <a href="tel:87003754000" class="header__button" data-locale="ru">
                         <svg class="icon">
                             <use xlink:href="img/sprites/sprite.svg#Phone"></use>
                         </svg>
                         8 (700) 375 40 00
+                    </a>
+
+                    <a href="tel:87003756000" class="header__button" data-locale="kz" style="display:none">
+                        <svg class="icon">
+                            <use xlink:href="img/sprites/sprite.svg#Phone"></use>
+                        </svg>
+                        8 (700) 375 60 00
                     </a>
                 </div>
             </div>
@@ -59,20 +73,20 @@
         <section class="hero">
             <div class="hero__wrap" id="hero">
                 <div class="hero__descriptor" data-animate="reveal">Arena Sunset</div>
-                <h1 class="hero__title" data-animate="reveal">Ваш надёжный вклад в счастливое будущее</h1>
-                <p class="hero__description" data-animate="reveal">Жилой комплекс комфорт-плюс класса по цене эконома с квартирами в черновой отделке и потолками 2,8 м</p>
-                <a href="#modal-form" class="button hero__button" data-animate="reveal" data-modal-open="modalform">Оставить заявку</a>
+                <h1 class="hero__title" data-string="hero_title" data-animate="reveal">Ваш надёжный вклад в счастливое будущее</h1>
+                <p class="hero__description" data-string="hero_text" data-animate="reveal">Жилой комплекс комфорт-плюс класса по цене эконома с квартирами в черновой отделке и потолками 2,8 м</p>
+                <a href="#modal-form" data-string="hero_button" class="button hero__button" data-animate="reveal" data-modal-open="modalform">Оставить заявку</a>
             </div>
             
             <div class="hero__indicators">
                 <div class="indicator indicator--inverse hero__indicator" data-animate="reveal">
-                    <div class="indicator__value">41,7 м² – 118,3 м²</div>
-                    <div class="indicator__key">площадь квартир</div>
+                    <div class="indicator__value" data-string="hero_i1_value">41,7 м² – 118,3 м²</div>
+                    <div class="indicator__key" data-string="hero_i1_key">площадь квартир</div>
                 </div>
 
                 <div class="indicator indicator--inverse hero__indicator" data-animate="reveal">
-                    <div class="indicator__value">от 420 000 ₸ / м²</div>
-                    <div class="indicator__key">стоимость квартир</div>
+                    <div class="indicator__value" data-string="hero_i2_value">от 420 000 ₸ / м²</div>
+                    <div class="indicator__key" data-string="hero_i2_key">стоимость квартир</div>
                 </div>
             </div>
 
@@ -82,31 +96,31 @@
 
         <section id="about" class="section about container">
             <div class="about__col-1">
-                <h2 class="about__title title" data-animate="reveal">В первую очередь — ваш комфорт</h2>
+                <h2 class="about__title title" data-string="about_title" data-animate="reveal">В первую очередь — ваш комфорт</h2>
 
                 <img src="img/about-1.webp" alt="" data-animate="reveal">
 
                 <div class="about__indicators">
                     <div class="about__indicator indicator" data-animate="reveal">
-                        <div class="indicator__value">5 блоков</div>
-                        <div class="indicator__key">высотой 9–12 этажей</div>
+                        <div class="indicator__value" data-string="about_i1_value">5 блоков</div>
+                        <div class="indicator__key" data-string="about_i1_key">высотой 9–12 этажей</div>
                     </div>
                     <div class="about__indicator indicator" data-animate="reveal">
-                        <div class="indicator__value">209 квартир</div>
-                        <div class="indicator__key">в жилом комплексе</div>
+                        <div class="indicator__value" data-string="about_i2_value">209 квартир</div>
+                        <div class="indicator__key" data-string="about_i2_key">в жилом комплексе</div>
                     </div>
                 </div>
             </div>
 
             <div class="about__col-2">
-                <p data-animate="reveal">Здесь сочетаются преимущества уединённой жизни и доступность к нужным для комфортной жизни объектам. На территории будет бизнес-центр от застройщика ARENA SUNSET. В нем жильцы комплекса смогут посещать лучших врачей, ходить за покупками и учиться, не покидая родного двора.</p>
+                <p data-string="about_p1" data-animate="reveal">Здесь сочетаются преимущества уединённой жизни и доступность к нужным для комфортной жизни объектам. На территории будет бизнес-центр от застройщика ARENA SUNSET. В нем жильцы комплекса смогут посещать лучших врачей, ходить за покупками и учиться, не покидая родного двора.</p>
 
                 <img src="img/about-2.webp" alt="" data-animate="reveal">
                 
-                <p data-animate="reveal">На 10-м этаже БЦ расположится ресторан с террасой и панорамным видом на город. Захотелось съесть круассан или позаниматься спортом? Сделать это можно быстрее, чем дойти до БЦ — на первом этаже ЖК есть коммерческие помещения.</p>
+                <p data-string="about_p2" data-animate="reveal">На 10-м этаже БЦ расположится ресторан с террасой и панорамным видом на город. Захотелось съесть круассан или позаниматься спортом? Сделать это можно быстрее, чем дойти до БЦ — на первом этаже ЖК есть коммерческие помещения.</p>
 
                 <a href="#" target="_blank" class="about__link" data-animate="reveal">
-                    О бизнес-центре
+                    <span data-string="about_link">О бизнес-центре</span>
                     <svg class="icon">
                         <use xlink:href="img/sprites/sprite.svg#External_Link"></use>
                     </svg>
@@ -115,7 +129,7 @@
         </section>
 
         <section id="inner" class="inner">
-            <h2 class="title inner__title container" data-animate="reveal">Всё что нужно — внутри</h2>
+            <h2 class="title inner__title container" data-string="inner_title" data-animate="reveal">Всё что нужно — внутри</h2>
 
             <figure class="inner__image">
                 <picture class="inner__prospect">
@@ -134,8 +148,8 @@
                         <use xlink:href="img/sprites/sprite.svg#Garage"></use>
                     </svg>
                     <div class="inner-item__wrap">
-                        <h3 class="inner-item__title" data-animate="reveal">Паркинг</h3>
-                        <p class="inner-item__text" data-animate="reveal">У вас не будет проблем с парковкой автомобиля. Здесь есть подземный паркинг в 2 этажа</p>
+                        <h3 class="inner-item__title" data-string="inner_i1_title" data-animate="reveal">Паркинг</h3>
+                        <p class="inner-item__text" data-string="inner_i1_text" data-animate="reveal">У вас не будет проблем с парковкой автомобиля. Здесь есть подземный паркинг в 2 этажа</p>
                     </div>
                 </div>
                 <div class="inner-item">
@@ -143,8 +157,8 @@
                         <use xlink:href="img/sprites/sprite.svg#Playground"></use>
                     </svg>
                     <div class="inner-item__wrap">
-                        <h3 class="inner-item__title" data-animate="reveal">Детская площадка</h3>
-                        <p class="inner-item__text" data-animate="reveal">Деревянные «джунгли», горки и качели. Вся территория полностью безопасна</p>
+                        <h3 class="inner-item__title" data-string="inner_i2_title" data-animate="reveal">Детская площадка</h3>
+                        <p class="inner-item__text" data-string="inner_i2_text" data-animate="reveal">Деревянные «джунгли», горки и качели. Вся территория полностью безопасна</p>
                     </div>
                 </div>
                 <div class="inner-item">
@@ -152,8 +166,8 @@
                         <use xlink:href="img/sprites/sprite.svg#Bench"></use>
                     </svg>
                     <div class="inner-item__wrap">
-                        <h3 class="inner-item__title" data-animate="reveal">Двор</h3>
-                        <p class="inner-item__text" data-animate="reveal">Спортивные площадки, зоны workout и удобные тротуары для приятных вечерних прогулок</p>
+                        <h3 class="inner-item__title" data-string="inner_i3_title" data-animate="reveal">Двор</h3>
+                        <p class="inner-item__text" data-string="inner_i3_text" data-animate="reveal">Спортивные площадки, зоны workout и удобные тротуары для приятных вечерних прогулок</p>
                     </div>
                 </div>
                 <div class="inner-item">
@@ -161,8 +175,8 @@
                         <use xlink:href="img/sprites/sprite.svg#Secure"></use>
                     </svg>
                     <div class="inner-item__wrap">
-                        <h3 class="inner-item__title" data-animate="reveal">Безопасность</h3>
-                        <p class="inner-item__text" data-animate="reveal">Вход в ЖК доступен лишь жильцам и их гостям, никто не попадёт сюда без приглашения</p>
+                        <h3 class="inner-item__title" data-string="inner_i4_title" data-animate="reveal">Безопасность</h3>
+                        <p class="inner-item__text" data-string="inner_i4_text" data-animate="reveal">Вход в ЖК доступен лишь жильцам и их гостям, никто не попадёт сюда без приглашения</p>
                     </div>
                 </div>
             </div>
@@ -172,8 +186,8 @@
             <div class="cta__wrap">
                 <div class="cta__background"></div>
                 <form class="cta__main" action="#">
-                    <input type="tel" minlength="11" class="input" placeholder="Номер телефона" required>
-                    <button class="button">Оставить бронь</button>
+                    <input data-string="form_placeholder" type="tel" minlength="11" class="input" placeholder="Номер телефона" required>
+                    <button data-string="form_button" class="button">Оставить бронь</button>
                 </form>
             </div>
         </section>
@@ -181,8 +195,8 @@
         <section id="features" class="section features">
             <div class="container">
                 <div class="features__header">
-                    <h2 class="title features__title" data-animate="reveal">Продумано до мелочей</h2>
-                    <p class="features__description" data-animate="reveal">Современных людей уже не удивить большой квадратурой или видом из окна. Сейчас к жилью выставляется много критериев, каждый из которых влияет на качество нашей жизни. В ЖК ARENA SUNSET мы предусмотрели каждый из них</p>
+                    <h2 data-string="features_title" class="title features__title" data-animate="reveal">Продумано до мелочей</h2>
+                    <p data-string="features_text" class="features__description" data-animate="reveal">Современных людей уже не удивить большой квадратурой или видом из окна. Сейчас к жилью выставляется много критериев, каждый из которых влияет на качество нашей жизни. В ЖК ARENA SUNSET мы предусмотрели каждый из них</p>
                 </div>
 
                 <div class="features__grid">
@@ -191,8 +205,8 @@
                             <img src="img/features/1.webp" alt="" data-animate="reveal">
                         </div>
                         <div class="features-item__text">
-                            <h3 class="features-item__title" data-animate="reveal">Материалы</h3>
-                            <p data-animate="reveal">Наши дома сделаны из монолита, что гарантирует сейсмоустойчивость. Стены из газоблока отвечают за тишину и тепло в вашей квартире, а облицовка из фиброцементных панелей и алюминиевых профилей отвечают за эстетику</p>
+                            <h3 data-string="features_i1_title" class="features-item__title" data-animate="reveal">Материалы</h3>
+                            <p data-string="features_i1_text" data-animate="reveal">Наши дома сделаны из монолита, что гарантирует сейсмоустойчивость. Стены из газоблока отвечают за тишину и тепло в вашей квартире, а облицовка из фиброцементных панелей и алюминиевых профилей отвечают за эстетику</p>
                         </div>
                     </div>
                     <div class="features-item">
@@ -200,8 +214,8 @@
                             <img src="img/features/2.webp" alt="" data-animate="reveal">
                         </div>
                         <div class="features-item__text">
-                            <h3 class="features-item__title" data-animate="reveal">Лобби</h3>
-                            <p data-animate="reveal">Светлые меблированные холлы в стиле минимализм произведут неизгладимое впечатление на ваших гостей, а два скоростных лифта домчат до квартиры за считанные секунды</p>
+                            <h3 data-string="features_i2_title" class="features-item__title" data-animate="reveal">Лобби</h3>
+                            <p data-string="features_i2_text" data-animate="reveal">Светлые меблированные холлы в стиле минимализм произведут неизгладимое впечатление на ваших гостей, а два скоростных лифта домчат до квартиры за считанные секунды</p>
                         </div>
                     </div>
                     <div class="features-item">
@@ -209,8 +223,8 @@
                             <img src="img/features/3.webp" alt="" data-animate="reveal">
                         </div>
                         <div class="features-item__text">
-                            <h3 class="features-item__title" data-animate="reveal">Панорамные окна</h3>
-                            <p data-animate="reveal">В ЖК ARENA SUNSET установлены панорамные окна с алюминиевыми профилями. Они визуально увеличивают пространство, пропускают много света и гораздо прочнее пластиковых аналогов. В вашей квартире всегда будет тепло и солнечно</p>
+                            <h3 data-string="features_i3_title" class="features-item__title" data-animate="reveal">Панорамные окна</h3>
+                            <p data-string="features_i3_text" data-animate="reveal">В ЖК ARENA SUNSET установлены панорамные окна с алюминиевыми профилями. Они визуально увеличивают пространство, пропускают много света и гораздо прочнее пластиковых аналогов. В вашей квартире всегда будет тепло и солнечно</p>
                         </div>
                     </div>
                     <div class="features-item">
@@ -218,8 +232,8 @@
                             <img src="img/features/4.webp" alt="" data-animate="reveal">
                         </div>
                         <div class="features-item__text">
-                            <h3 class="features-item__title" data-animate="reveal">Отделка</h3>
-                            <p data-animate="reveal">Квартиры с потолками 2,8 м сдаются в черновой отделке. Это открывает большой простор для дизайнерской фантазии — располагайте комнаты и мебель как угодно вашей душе и кошельку</p>
+                            <h3 data-string="features_i4_title" class="features-item__title" data-animate="reveal">Отделка</h3>
+                            <p data-string="features_i4_text" data-animate="reveal">Квартиры с потолками 2,8 м сдаются в черновой отделке. Это открывает большой простор для дизайнерской фантазии — располагайте комнаты и мебель как угодно вашей душе и кошельку</p>
                         </div>
                     </div>
                 </div>
@@ -229,17 +243,17 @@
         <section id="outer" class="section outer">
             <div class="outer__scheme" id="map"></div>
             <div class="container outer__main">
-                <h2 class="title outer__title" data-animate="reveal">Оцените свободу</h2>
-                <p class="outer__description" data-animate="reveal">ЖК ARENA SUNSET расположен в одном из самых перспективных районов города. Отсюда можно быстро добраться как в центр, так и за город. К вашим услугам более 10 автобусных маршрутов и 2 автомобильных проспекта.</p>
+                <h2 data-string="outer_title" class="title outer__title" data-animate="reveal">Оцените свободу</h2>
+                <p data-string="outer_text" class="outer__description" data-animate="reveal">ЖК ARENA SUNSET расположен в одном из самых перспективных районов города. Отсюда можно быстро добраться как в центр, так и за город. К вашим услугам более 10 автобусных маршрутов и 2 автомобильных проспекта.</p>
             </div>
         </section>
 
         <section id="appartments" class="section appartments">
             <div class="container">
                 <div class="appartments__header">
-                    <h2 class="title appartments__title" data-animate="reveal">Выберите свою квартиру</h2>
+                    <h2 data-string="apps_title" class="title appartments__title" data-animate="reveal">Выберите свою квартиру</h2>
                     <form class="appartments__filter" data-animate="reveal">
-                        <div class="filter__label">Кол-во комнат</div>
+                        <div data-string="apps_rooms" class="filter__label">Кол-во комнат</div>
                         <div class="filter__options">
                             <label class="filter__option">
                                 <input name="rooms[]" value="1" type="checkbox">
@@ -273,10 +287,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1.5-комнатная • 55.2м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1_5r">1.5-комнатная</span> • 55.2м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1">
@@ -285,10 +299,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1-комнатная • 43.1м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1r">1-комнатная</span> • 43.1м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1">
@@ -297,10 +311,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1-комнатная • 43.1м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1r">1-комнатная</span> • 43.1м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1">
@@ -309,10 +323,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1-комнатная • 43.1м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1r">1-комнатная</span> • 43.1м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="2">
@@ -321,10 +335,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">2-комнатная • 73.2м²</div>
+                                    <div class="appartment__title"><span data-string="apps_2r">2-комнатная</span> • 73.2м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="2">
@@ -333,10 +347,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">2-комнатная • 73.2м²</div>
+                                    <div class="appartment__title"><span data-string="apps_2r">2-комнатная</span> • 73.2м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="2">
@@ -345,10 +359,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">2-комнатная • 67.0м²</div>
+                                    <div class="appartment__title"><span data-string="apps_2r">2-комнатная</span> • 67.0м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="2">
@@ -357,10 +371,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">2-комнатная • 63.5м²</div>
+                                    <div class="appartment__title"><span data-string="apps_2r">2-комнатная</span> • 63.5м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1">
@@ -369,10 +383,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1-комнатная • 41.7м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1r">1-комнатная</span> • 41.7м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1.5">
@@ -381,10 +395,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1.5-комнатная • 45.3м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1_5r">1.5-комнатная</span> • 45.3м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="3">
@@ -393,10 +407,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">3-комнатная • 94.9м²</div>
+                                    <div class="appartment__title"><span data-string="apps_3r">3-комнатная</span> • 94.9м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="2">
@@ -405,10 +419,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">2-комнатная • 67.0м²</div>
+                                    <div class="appartment__title"><span data-string="apps_2r">2-комнатная</span> • 67.0м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="2">
@@ -417,10 +431,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">2-комнатная • 64.2м²</div>
+                                    <div class="appartment__title"><span data-string="apps_2r">2-комнатная</span> • 64.2м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1">
@@ -429,10 +443,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1-комнатная • 41.7м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1r">1-комнатная</span> • 41.7м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="3">
@@ -441,10 +455,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">3-комнатная • 94.9м²</div>
+                                    <div class="appartment__title"><span data-string="apps_3r">3-комнатная</span> • 94.9м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="2">
@@ -453,10 +467,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">2-комнатная • 64.2м²</div>
+                                    <div class="appartment__title"><span data-string="apps_2r">2-комнатная</span> • 64.2м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1">
@@ -465,10 +479,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1-комнатная • 46.6м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1r">1-комнатная</span> • 46.6м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="4">
@@ -477,10 +491,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">4-комнатная • 102.7м²</div>
+                                    <div class="appartment__title"><span data-string="apps_4r">4-комнатная</span> • 102.7м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                         <div class="appartment swiper-slide" data-rooms="1.5">
@@ -489,10 +503,10 @@
                             </a>
                             <div class="appartment__header">
                                 <div class="appartment__main">
-                                    <div class="appartment__title">1.5-комнатная • 52.8м²</div>
+                                    <div class="appartment__title"><span data-string="apps_1_5r">1.5-комнатная</span> • 52.8м²</div>
                                     <div class="appartment__subtitle">99 999 999 ₸</div>
                                 </div>
-                                <a href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
+                                <a data-string="apps_button" href="#modal-form" data-modal-open="modalform" class="button appartment__button">Выбрать</a>
                             </div>
                         </div>
                     </div>
@@ -502,31 +516,31 @@
         </section>
 
         <section id="purchase" class="section purchase container">
-            <h2 class="title purchase__title" data-animate="reveal">Варианты покупки</h2>
+            <h2 data-string="purchase_title" class="title purchase__title" data-animate="reveal">Варианты покупки</h2>
             <div class="purchase__list">
                 <div class="purchase-item" data-animate="reveal">
-                    <h3 class="purchase-item__title" data-animate="reveal">100% оплата</h3>
-                    <p class="purchase-item__text" data-animate="reveal">При единовременной 100% оплате каждому покупателю предлагаются выгодные скидочные условия</p>
-                    <a href="#modal-form" data-modal-open="modalform" class="button purchase-item__button">Получите скидку</a>
+                    <h3 data-string="purchase_i1_title" class="purchase-item__title" data-animate="reveal">100% оплата</h3>
+                    <p data-string="purchase_i1_text" class="purchase-item__text" data-animate="reveal">При единовременной 100% оплате каждому покупателю предлагаются выгодные скидочные условия</p>
+                    <a data-string="purchase_i1_button" href="#modal-form" data-modal-open="modalform" class="button purchase-item__button">Получите скидку</a>
                 </div>
                 <div class="purchase-item" data-animate="reveal">
-                    <h3 class="purchase-item__title" data-animate="reveal">Рассрочка 50%</h3>
-                    <p class="purchase-item__text" data-animate="reveal">Рассрочка от застройщика с первоначальным взносом 50% и выплатами до ввода в эксплуатацию</p>
-                    <a href="#modal-form" data-modal-open="modalform" class="button purchase-item__button">Рассчитайте рассрочку</a>
+                    <h3 data-string="purchase_i2_title" data-string="purchase_" class="purchase-item__title" data-animate="reveal">Рассрочка 50%</h3>
+                    <p data-string="purchase_i2_text" data-string="purchase_" class="purchase-item__text" data-animate="reveal">Рассрочка от застройщика с первоначальным взносом 50% и выплатами до ввода в эксплуатацию</p>
+                    <a data-string="purchase_i2_button" data-string="purchase_" href="#modal-form" data-modal-open="modalform" class="button purchase-item__button">Рассчитайте рассрочку</a>
                 </div>
                 <div class="purchase-item purchase-item--accent" data-animate="reveal">
-                    <h3 class="purchase-item__title" data-animate="reveal">Получите подробную консультацию</h3>
-                    <p class="purchase-item__text" data-animate="reveal">Наш менеджер свяжется с вами, чтобы подобрать выгодные условия</p>
-                    <a href="#modal-form" data-modal-open="modalform" class="button button--inverse purchase-item__button">Оставить заявку</a>
+                    <h3 data-string="purchase_i3_title" data-string="purchase_" class="purchase-item__title" data-animate="reveal">Получите подробную консультацию</h3>
+                    <p data-string="purchase_i3_text" data-string="purchase_" class="purchase-item__text" data-animate="reveal">Наш менеджер свяжется с вами, чтобы подобрать выгодные условия</p>
+                    <a data-string="purchase_i3_button" data-string="purchase_" href="#modal-form" data-modal-open="modalform" class="button button--inverse purchase-item__button">Оставить заявку</a>
                 </div>
             </div>
         </section>
 
         <section id="developer" class="developer container">
-            <h2 class="title developer__title" data-animate="reveal">О застройщике</h2>
+            <h2 data-string="dev_title" class="title developer__title" data-animate="reveal">О застройщике</h2>
             <div class="developer__text">
-                <p data-animate="reveal">Возведением ЖК ARENA SUNSET занимается частная мобильная компания, которая участвовала в строительстве многих жилых комплексов и объектов государственного назначения. Сейчас мы ушли в «свободное плавание», и теперь за счёт небольших объёмов компании, можем позволить себе строить по-настоящему качественные дома.</p>
-                <p data-animate="reveal">У нас нет маркетологов, продавцов и менеджеров. Вместо этого мы нанимаем действительно опытных специалистов в области строительства и закупаем дорогие и качественные материалы. Поэтому ЖК ARENA SUNSET сохраняет все преимущества комфорт+ класса, при этом вы можете приобрести их по цене эконома.</p>
+                <p data-string="dev_p1" data-animate="reveal">Возведением ЖК ARENA SUNSET занимается частная мобильная компания, которая участвовала в строительстве многих жилых комплексов и объектов государственного назначения. Сейчас мы ушли в «свободное плавание», и теперь за счёт небольших объёмов компании, можем позволить себе строить по-настоящему качественные дома.</p>
+                <p data-string="dev_p2" data-animate="reveal">У нас нет маркетологов, продавцов и менеджеров. Вместо этого мы нанимаем действительно опытных специалистов в области строительства и закупаем дорогие и качественные материалы. Поэтому ЖК ARENA SUNSET сохраняет все преимущества комфорт+ класса, при этом вы можете приобрести их по цене эконома.</p>
             </div>
             <div class="developer__indexes">
                 <div class="developer-index" data-animate="reveal">
@@ -534,28 +548,28 @@
                         <use xlink:href="img/sprites/sprite.svg#Apartment"></use>
                     </svg>
                     <div class="developer-index__value">12</div>
-                    <div class="developer-index__key">жилых<br>комплексов</div>
+                    <div data-string="dev_i1" class="developer-index__key">жилых<br>комплексов</div>
                 </div>
                 <div class="developer-index" data-animate="reveal">
                     <svg class="icon developer-index__icon">
                         <use xlink:href="img/sprites/sprite.svg#Parliament"></use>
                     </svg>
                     <div class="developer-index__value">8</div>
-                    <div class="developer-index__key">объектов<br>гос. назначения</div>
+                    <div data-string="dev_i2" class="developer-index__key">объектов<br>гос. назначения</div>
                 </div>
                 <div class="developer-index" data-animate="reveal">
                     <svg class="icon developer-index__icon">
                         <use xlink:href="img/sprites/sprite.svg#Factory"></use>
                     </svg>
                     <div class="developer-index__value">3</div>
-                    <div class="developer-index__key">завода</div>
+                    <div data-string="dev_i3" class="developer-index__key">завода</div>
                 </div>
             </div>
         </section>
 
         <section id="progress" class="section progress">
             <div class="container">
-                <h2 class="title progress__title" data-animate="reveal">Смотрите, как строится ваша мечта</h2>
+                <h2 data-string="progress_title" class="title progress__title" data-animate="reveal">Смотрите, как строится ваша мечта</h2>
                 <div class="timeline progress__timeline" data-animate="reveal">
                     <span class="timeline__bar" style="width: 50%;"></span>
                     <div tabindex="0" class="timeline__point">
@@ -607,21 +621,21 @@
                                 <img src="img/progress.webp" alt="">
                                 <button class="progress-item__play"></button>
                             </div>
-                            <h3 class="progress-item__title">Июль, 2023</h3>
+                            <h3 class="progress-item__title"><span data-string="month_07">Июль</span>, 2023</h3>
                         </a>
                         <a href="https://www.youtube.com/watch?v=SvApoH3n9FE" class="progress-item swiper-slide" data-lightbox>
                             <div class="progress-item__preview">
                                 <img src="img/progress.webp" alt="">
                                 <button class="progress-item__play"></button>
                             </div>
-                            <h3 class="progress-item__title">Июнь, 2023</h3>
+                            <h3 class="progress-item__title"><span data-string="month_06">Июнь</span>, 2023</h3>
                         </a>
                         <a href="https://www.youtube.com/watch?v=SvApoH3n9FE" class="progress-item swiper-slide" data-lightbox>
                             <div class="progress-item__preview">
                                 <img src="img/progress.webp" alt="">
                                 <button class="progress-item__play"></button>
                             </div>
-                            <h3 class="progress-item__title">Май, 2023</h3>
+                            <h3 class="progress-item__title"><span data-string="month_05">Май</span>, 2023</h3>
                         </a>
                     </div>
                 </div>
@@ -632,8 +646,8 @@
             <div class="cta__wrap">
                 <div class="cta__background"></div>
                 <form class="cta__main" action="#">
-                    <input type="tel" minlength="11" class="input" placeholder="Номер телефона" required>
-                    <button class="button">Оставить бронь</button>
+                    <input data-string="form_placeholder" type="tel" minlength="11" class="input" placeholder="Номер телефона" required>
+                    <button data-string="form_button" class="button">Оставить бронь</button>
                 </form>
             </div>
         </section>
@@ -641,26 +655,21 @@
         <footer class="footer"">
             <div class="container footer__wrap">
                 <div class="footer__main">
-                    <div class="footer__copy" data-animate="reveal">© ЖК Arena Sunset, 2023</div>
+                    <div data-string="footer_copyright" class="footer__copy" data-animate="reveal">© ЖК Arena Sunset, 2023</div>
                     <div class="footer__social" data-animate="reveal">
-                        <a href="" target="_blank">
+                        <a href="#" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="img/sprites/sprite.svg#Instagram"></use>
                             </svg>
                         </a>
-                        <a href="" target="_blank">
-                            <svg class="icon">
-                                <use xlink:href="img/sprites/sprite.svg#Facebook"></use>
-                            </svg>
-                        </a>
-                        <a href="" target="_blank">
+                        <a href="https://api.whatsapp.com/send/?phone=77017776852" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="img/sprites/sprite.svg#WhatsApp"></use>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div class="footer__disclaimer" data-animate="reveal">
+                <div data-string="footer_disclaimer" class="footer__disclaimer" data-animate="reveal">
                     Представленные фотографии и 3D-иллюстрации, описание проекта и применяемых материалов, планировочные решения квартир, инфраструктура и благоустройство комплекса являются условным примером организации жилого пространства и могут быть изменены в ходе строительства и эксплуатации.
                 </div>
             </div>
@@ -669,11 +678,11 @@
         <div class="modal" id="modalform">
             <div class="modal__overlay" data-modal-close>
                 <div class="modal__window">
-                    <div class="modal__title">Оставить заявку</div>
-                    <div class="modal__text">Оставленная заявка ни к чему вас не обязывает</div>
+                    <div data-string="modal_title" class="modal__title">Оставить заявку</div>
+                    <div data-string="modal_text" class="modal__text">Оставленная заявка ни к чему вас не обязывает</div>
                     <form class="form modal__form">
-                        <input type="tel" minlength="11" class="input" placeholder="Номер телефона" required>
-                        <button class="button">Оставить заявку</button>
+                        <input data-string="form_placeholder" type="tel" minlength="11" class="input" placeholder="Номер телефона" required>
+                        <button data-string="modal_button" class="button">Оставить заявку</button>
                     </form>
                 </div>
             </div>        
