@@ -6,7 +6,7 @@ i18next
 .init({
 	lng: 'ru',
     backend: {
-		loadPath: '/{{lng}}.json'
+		loadPath: '{{lng}}.json'
 	},
 }, function(err, t) {
 	updateContent();
