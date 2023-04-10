@@ -56,7 +56,7 @@ const requireDir = require("require-dir"),
         gzip: {
             src: [
                 "./src/.htaccess",
-                "./src/locale/*.*",
+                "./src/*.json",
             ],
             dist: "./dist/"
         }
