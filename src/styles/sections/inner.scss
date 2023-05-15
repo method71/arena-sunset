@@ -2,26 +2,6 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-    // &__image {
-    //     display: flex;
-    //     justify-content: center;
-    //     overflow: hidden;
-    //     position: relative;
-    //     margin: clamp(1.5rem, 5vw, 3.5rem) 0;
-
-    //     picture {
-    //         min-width: 800px;
-    //     }
-    // }
-
-    // &__markers {
-    //     position: absolute;
-    //     width: 100%;
-    //     height: auto;
-    //     min-width: 800px;
-    //     background-size: cover;
-    // }
-
     &__image {
         position: relative;
         margin: clamp(1.5rem, 5vw, 3.5rem) 0;
@@ -85,7 +65,7 @@
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 2rem;
 
         @media (max-width: 900px) {

@@ -213,12 +213,30 @@ function initMap() {
 		title: 'Arena Sunset'
 	});
 
+	const arenapark = new google.maps.Circle({
+		center: { lat: 43.273753, lng: 76.814938 },
+		strokeColor: "#C74C31",
+		strokeOpacity: 1,
+		strokeWeight: 2,
+		fillColor: "#C74C31",
+		fillOpacity: 0.5,
+		radius: 25,
+		map,
+		title: 'Arena Park'
+	});
+
 	let tooltip = new google.maps.InfoWindow({
 		content: "Arena Sunset",
 		position: objectCenter
 	});
 
+	let tooltip2 = new google.maps.InfoWindow({
+		content: "Arena Park",
+		position: { lat: 43.273753, lng: 76.814938 }
+	});
+
 	tooltip.open(map);
+	tooltip2.open(map);
 }
 
 if(mapElement) window.initMap = initMap;
