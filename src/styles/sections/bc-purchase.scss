@@ -1,0 +1,46 @@
+.bc-purchase {
+	&__text {
+		margin-top: clamp(1rem, 5vw, 1.5rem);
+	}
+
+	&__list {
+		margin-top: clamp(1.5rem, 5vw, 3rem);
+		display: flex;
+		flex-wrap: wrap;
+		gap: size('gap');
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 0;
+		padding: clamp(1rem, 3vw, 2.5rem);
+		min-width: 20rem;;
+		@include bg-dark-granite;
+		@include rounded;
+		
+		&--accent {
+			background: color('accent');
+			color: #fff;
+		}
+		
+		&__title {
+			@include text-caption;
+			color: #fff;
+			font-size: clamp(1.75rem, 5vw, 2rem);
+			margin-bottom: 1rem;
+		}
+
+		&--accent &__title {
+			color: inherit;
+		}
+
+		&__text {
+			margin-bottom: 1.5rem;
+		}
+
+		&__button {
+			margin-top: auto;
+		}
+	}
+}

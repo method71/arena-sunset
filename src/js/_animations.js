@@ -15,7 +15,7 @@ let reveal = () => {
 				duration: 2,
 				scrollTrigger: {
 					trigger: el,
-					start: 'top center',
+					start: 'top bottom',
 					toggleActions: 'play none play reverse'
 				}
 			}, 'text')

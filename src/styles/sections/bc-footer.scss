@@ -1,0 +1,21 @@
+.bc-footer {
+	@include bg-dark-granite;
+	padding: 2rem 0;
+
+	&__wrap {
+		display: flex;
+		gap: size('gap');
+
+		@include mobile {
+			flex-direction: column;
+		}
+		
+		& > * {
+			flex: 1 0 auto;
+		}
+	}
+
+	a {
+		color: color('accent');
+	}
+}
