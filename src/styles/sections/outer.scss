@@ -1,8 +1,8 @@
-.bc-outer {
-	height: clamp(40rem, 70vw, 68rem);
+.outer {
+	height: clamp(31rem, 70vw, 68rem);
 	position: relative;
 	overflow: hidden;
-	padding: clamp(3rem, 10vw, 5.5rem) 0;
+	padding-bottom: clamp(3rem, 10vw, 5.5rem);
 	font-size: size('text');
 	@include bg-base-granite;
 
@@ -37,15 +37,7 @@
 
 	&__description {
 		font-weight: 500;
+		width: 30.5rem;
 		max-width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		gap: clamp(1rem, 5vw, 2rem);
-
-		p {
-			min-width: 20rem;
-			max-width: 37rem;
-			flex: 1 1 auto;
-		}
 	}
 }
